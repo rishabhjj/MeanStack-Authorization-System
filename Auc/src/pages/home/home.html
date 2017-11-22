@@ -1,0 +1,113 @@
+<ion-header >
+    <ion-navbar color="primary">
+        
+      <ion-buttons left>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>
+        PAuction
+      </ion-title>
+      <ion-buttons end>
+          <button (click)="myFunction()" ion-button icon-only>
+            <ion-icon name="search"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-buttons end>
+            <button (click)="myFunction()" ion-button icon-only>
+              <ion-icon name="cart"></ion-icon>
+            </button>
+          </ion-buttons>
+          <ion-buttons end>
+              <button (click)="myFunction()" ion-button icon-only>
+                <ion-icon name="contact"></ion-icon>
+              </button>
+            </ion-buttons>
+           
+               
+            
+    
+    </ion-navbar>
+    <ion-navbar color="primary">
+        <ion-grid no-padding fixed>
+            <ion-row justify-content-center class="bg-style" style="height: 80%;" >
+                <ion-col col-3 >
+                   
+                    
+                    <button (click)="myFunction()" ion-button icon-only>
+                        <ion-icon name="cart"></ion-icon>
+                      </button>
+                    
+                     
+                    
+                      
+                    <p style = "font-size:10px"> Electronics</p>
+                
+                    
+                </ion-col>
+                <ion-col col-3>
+                   
+                        <button color="primary" (click)="myFunction()" ion-button icon-only>
+                            <ion-icon name="cart"></ion-icon>
+                        
+                          </button>
+                          <p style = "font-size:10px"> Sports</p>
+                        
+                </ion-col>
+                <ion-col  col-3 >
+                  
+                        <button (click)="myFunction()" ion-button icon-only>
+                            <ion-icon name="cart"></ion-icon>
+                        
+                          </button>
+                          <p style = "font-size:10px">Furniture</p>
+                        
+                </ion-col>
+                <ion-col  col-3 >
+                  
+                        <button (click)="more()" ion-button icon-only>
+                            <ion-icon name="cart"></ion-icon>
+                        
+                          </button>
+                          <p style = "font-size:10px">More</p>
+                          
+                       
+                </ion-col>
+                
+            </ion-row>
+          </ion-grid>
+      
+            
+    
+    </ion-navbar>
+  </ion-header>
+ 
+
+<ion-content >
+ 
+   
+    
+    <ion-card style="min-width: 100%">
+    <ion-slides  *ngIf="items && items.length" autoplay="3" loop="true" speed="3000" >
+        <ion-slide *ngFor="let item of items" (click)="viewItem(item)">
+            <img src="{{item.image}}" style="width: 300px; height: 300px;" />
+          <h4 class="slide-title" [innerHtml]="item.title"></h4>
+          <p [innerHtml]="item.price"></p>
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
+
+
+  <h2>Your Recommendations</h2>
+  <ion-list>
+  <ion-item *ngFor="let item of items" (click)="viewItem(item)">
+    <ion-thumbnail *ngIf="item.image" item-left>
+      <img src="{{item.image}}">
+    </ion-thumbnail>
+    <h2>{{item.title}}</h2>
+    {{item.price}}
+
+  </ion-item>
+</ion-list>
+</ion-content>

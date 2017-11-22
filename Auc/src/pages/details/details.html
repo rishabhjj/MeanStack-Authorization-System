@@ -1,0 +1,30 @@
+<ion-header>
+        <ion-navbar>
+          <ion-buttons left>
+            <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+          </ion-buttons>
+          <ion-title>
+            Details
+          </ion-title>
+        </ion-navbar>
+      </ion-header>
+
+      <ion-content padding>
+            <ion-card>
+                    <img src="{{item.image}}"/>
+                    <ion-card-content>
+                      <ion-card-title>
+                        {{item.title}}
+                        </ion-card-title>
+                      <p>
+                        {{item.description}}
+                      </p>
+                      <p>
+                          Price: Rs{{item.price}}
+                      </p>
+                      <button ion-button full>Bid Now</button>
+                    </ion-card-content>
+                  </ion-card>
+          </ion-content>

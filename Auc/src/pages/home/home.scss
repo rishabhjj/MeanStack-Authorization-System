@@ -1,0 +1,23 @@
+page-home {
+
+    ion-scroll[scrollX] {
+        white-space: nowrap;
+        .scroll-item {
+          display: inline-block;
+        }
+      }
+      .bg-style {
+            background-color:#488aff;
+          
+    }
+    ion-grid {
+        height: 100%;
+      
+        ion-row {
+          height: 33.33%;
+        }
+}
+
+     
+
+}
