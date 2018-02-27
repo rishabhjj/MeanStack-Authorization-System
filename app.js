@@ -35,7 +35,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-//Body parser
+
 
 app.use(bodyParser.json());
 
