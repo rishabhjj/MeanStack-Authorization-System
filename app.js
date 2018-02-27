@@ -15,7 +15,7 @@ console.log("MongoDb Connected");
 
 mongoose.connection.on('error', (err) =>
 {
-console.log("MongoDb Coection Fxxxailed"+err);
+console.log("MongoDb Coectioggn Fxxxailed"+err);
 });
 
 const app = express();
